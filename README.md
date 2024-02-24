@@ -2,6 +2,8 @@
 
 ## Documentação
 
+Quando o usuário solicitar para que gere a imagem, a camada 'presentation' envia uma requisição HTTP via fetch para um endpoint da camada 'logic' para que ela encaminhe a solicitação do acesso para a camada 'database', que retorna uma query SQL com 'id | imagem', que então é tratada pela camada 'logic' e direcionada para a camada 'presentation', que foi a primeira solicitante .
+
 ### Camada 'presentation'
 
 É responsável pela exibição das informações ao usuário. Foi utilizada a tecnologia ReactJS, o servidor roda na porta 3000.
